@@ -1,10 +1,12 @@
-var pesoUsuario = prompt("cual es tu peso?");
-var estaturaUsuario = prompt("cual es tu estatura?");
+var pesoUsuario = prompt("Ingresa tu peso en Kg");
+var estaturaUsuario = prompt("Ingresa tu estatura en Mts");
 var peso = parseFloat(pesoUsuario);
 var estatura = parseFloat(estaturaUsuario);
 
 function indice(){
- masaCorporal.innerHTML = peso/(estatura*estatura);
+	var calculo = (peso/(estatura*estatura));
+	calculo = calculo.toFixed(1);
+	 masaCorporal.innerHTML = "Tu IMC es de " + calculo ;
 }
 
 indice();
